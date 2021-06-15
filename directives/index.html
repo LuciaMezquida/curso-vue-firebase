@@ -6,7 +6,12 @@
     <title>Document</title>
   </head>
   <body>
+    <div id="main">
+      <h1 v-if="conected">Estás conectado</h1>
+      <p v-if="edad >= 18">Eres mayor de 18</p>
+      <p v-else>No puedes entrar</p>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
-    <script src="/code.js"></script>
+    <script src="code.js"></script>
   </body>
 </html>
