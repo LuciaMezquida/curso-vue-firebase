@@ -20,6 +20,11 @@
       <ul>
         <li v-for="item in showCompleted">{{item.title}}</li>
       </ul>
+      <hr />
+      <h3>Filtered List by {{task}}</h3>
+      <ul>
+        <li v-for="item in showByTitle">{{item.title}}</li>
+      </ul>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <script src="./code.js"></script>

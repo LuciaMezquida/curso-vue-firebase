@@ -30,5 +30,8 @@ const app = new Vue({
     showCompleted() {
       return this.tasksList.filter((item) => item.complete);
     },
+    showByTitle() {
+      return this.tasksList.filter((item) => item.title.includes(this.task));
+    },
   },
 });

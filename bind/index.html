@@ -1,0 +1,34 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .completed {
+        text-decoration: line-through;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <h2>Bind de clases y</h2>
+
+      <hr />
+      <h3>Tasks List</h3>
+      <ul>
+        <li
+          v-bind:class="{completed: item.complete}"
+          v-on:click="completeTask(item)"
+          v-for="item in tasksList"
+        >
+          {{item.title}}
+        </li>
+      </ul>
+      <hr />
+      <pre>{{tasksList}}</pre>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="./code.js"></script>
+  </body>
+</html>
