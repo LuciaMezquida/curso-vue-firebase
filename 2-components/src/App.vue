@@ -1,19 +1,20 @@
 <template>
   <div >
-      <Greetings />
-      <Component2 />
+    <Person name='Muka' age='16'/>
+    <hr>
+    <Person name='Sombra' age='8'/>
+    <hr>
+    <Person name='Mora' age='14'/>
   </div>
 </template>
 
 <script>
-import Greetings from './components/Greetings'
-import Component2 from './components/Component2'
+import Person from './components/Person'
 
 export default {
   name: 'App',
   components: {
-    Greetings,
-    Component2
+    Person
   }
 }
 </script>
