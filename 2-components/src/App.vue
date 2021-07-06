@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import Person from './components/Person'
+import Person from './components/Person';
 
 export default {
   name: 'App',
