@@ -14,7 +14,7 @@
     props: ['name', 'age'],
     components: {
       Child
-    }
+    },
   }
 </script>
 
