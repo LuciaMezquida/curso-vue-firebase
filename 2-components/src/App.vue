@@ -17,19 +17,26 @@
     >
     </Users>
     <hr>
+    <SlotComponent>Muka 
+      <template v-slot:slot2>
+        Muka es la dueña de la casa
+      </template>
+    </SlotComponent>
   </div>
 </template>
 
 <script>
 import Person from './components/Person';
 import Users from './components/Users';
+import SlotComponent from './components/SlotComponent';
 import axios from 'axios'
 
 export default {
   name: 'App',
   components: {
     Person,
-    Users
+    Users,
+    SlotComponent
   },
   data(){
       return{
