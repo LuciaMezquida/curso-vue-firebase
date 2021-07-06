@@ -15,3 +15,4 @@ Course of [Vue](https://vuejs.org/v2/guide/) and [Firebase](https://firebase.goo
 ## Components
 
 * [Vue-cli](https://cli.vuejs.org/guide/installation.html)
+* [Prop Validation](https://v3.vuejs.org/guide/component-props.html#prop-validation)
