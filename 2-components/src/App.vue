@@ -22,21 +22,25 @@
         Muka es la dueña de la casa
       </template>
     </SlotComponent>
+    <hr>
+    <Mother></Mother>
   </div>
 </template>
 
 <script>
-import Person from './components/Person';
-import Users from './components/Users';
-import SlotComponent from './components/SlotComponent';
 import axios from 'axios'
+import Mother from './components/Mother'
+import Person from './components/Person';
+import SlotComponent from './components/SlotComponent';
+import Users from './components/Users';
 
 export default {
   name: 'App',
   components: {
     Person,
     Users,
-    SlotComponent
+    SlotComponent,
+    Mother
   },
   data(){
       return{
