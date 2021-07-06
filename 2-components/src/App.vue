@@ -24,6 +24,10 @@
     </SlotComponent>
     <hr>
     <Mother></Mother>
+    <hr>
+    <RenderElement :tipo="h1">Menudo elemento h1 ;P</RenderElement>
+    <RenderElement :tipo="h2">Menudo elemento h2 ;P</RenderElement>
+    <RenderElement :tipo="h3">Menudo elemento h3 ;P</RenderElement>
   </div>
 </template>
 
@@ -31,16 +35,18 @@
 import axios from 'axios'
 import Mother from './components/Mother'
 import Person from './components/Person';
+import RenderElement from './components/RenderElement';
 import SlotComponent from './components/SlotComponent';
 import Users from './components/Users';
 
 export default {
   name: 'App',
   components: {
+    Mother,
     Person,
-    Users,
+    RenderElement,
     SlotComponent,
-    Mother
+    Users,
   },
   data(){
       return{
