@@ -1,6 +1,6 @@
 <template>
   <div id='app'>
-    <h1>Ejemplo de Vuex Básicoyar</h1>
+    <h1>Ejemplo de Vuex Básico</h1>
   </div>
 </template>
 
