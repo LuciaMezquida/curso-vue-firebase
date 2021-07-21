@@ -1,5 +1,6 @@
 import Vue from "vue";
 import Vuex from "vuex";
+import axios from "axios";
 
 Vue.use(Vuex);
 
@@ -14,6 +15,7 @@ export const store = new Vuex.Store({
       { name: "Maya", age: 2, active: true },
       { name: "Izzy", age: 8, active: false },
     ],
+    workers: null,
   },
   getters: {
     numberOfActives: (state) => {
@@ -23,6 +25,18 @@ export const store = new Vuex.Store({
   mutations: {
     increment: (state) => state.count++,
     decrement: (state) => state.count--,
+    getWorkers: (state) => {
+      //la mutación hace la petición y modifica el estado
+      axios
+        .get("https://jsonplaceholder.typicode.com/users")
+        .then((response) => (state.workers = response.data));
+    },
+  },
+  actions: {
+    //la acción llama a la mutación
+    printWorkers(context) {
+      context.commit("getWorkers");
+    },
   },
 });
 
