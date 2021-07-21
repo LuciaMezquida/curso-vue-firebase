@@ -19,3 +19,4 @@ Course of [Vue](https://vuejs.org/v2/guide/) and [Firebase](https://firebase.goo
 * [Slots](https://v3.vuejs.org/guide/component-slots.html#slot-content)
 * [Custom events](https://v3.vuejs.org/guide/component-custom-events.html#event-names) to create a comunication line from child component to its parent component
 * [Vuex](https://vuex.vuejs.org/guide/#the-simplest-store)
+* [mapState](https://vuex.vuejs.org/guide/state.html#getting-vuex-state-into-vue-components)
