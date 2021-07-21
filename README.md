@@ -21,4 +21,5 @@ Course of [Vue](https://vuejs.org/v2/guide/) and [Firebase](https://firebase.goo
 * [Vuex](https://vuex.vuejs.org/guide/#the-simplest-store)
 * [mapState](https://vuex.vuejs.org/guide/state.html#getting-vuex-state-into-vue-components)
 * [MapGetters](https://vuex.vuejs.org/guide/getters.html#property-style-access)
-* [Mutations](https://vuex.vuejs.org/guide/mutations.html)
+* [Mutations](https://vuex.vuejs.org/guide/mutations.html): for simple actions that modify the state
+* [Actions](https://vuex.vuejs.org/guide/actions.html): to perform asynchronous modifications
