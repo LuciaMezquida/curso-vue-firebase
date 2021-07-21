@@ -2,17 +2,20 @@
   <div id="app">
     <h1>Ejemplo de Vuex básico</h1>
     <Counter/>
+    <ReadStore />
   </div>
 </template>
 
 <script>
 
 import Counter from './components/Counter'
+import ReadStore from './components/ReadStore'
 
 export default {
   name: 'App',
   components: {
-    Counter
+    Counter,
+    ReadStore
   }
 }
 </script>
