@@ -15,6 +15,11 @@ export const store = new Vuex.Store({
       { name: "Izzy", age: 8, active: false },
     ],
   },
+  getters: {
+    numberOfActives: (state) => {
+      return state.users.filter((user) => user.active).length;
+    },
+  },
   mutations: {
     increment(state) {
       state.count++;
