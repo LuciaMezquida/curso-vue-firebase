@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h1>Ejemplo de Vuex básico</h1>
+    <h1>Ejemplo de Vuex básico by {{name}}</h1>
     <Counter/>
     <ReadStore />
   </div>
@@ -16,6 +16,11 @@ export default {
   components: {
     Counter,
     ReadStore
+  },
+  computed:{
+    name(){
+      return this.$store.state.name
+    }
   }
 }
 </script>
