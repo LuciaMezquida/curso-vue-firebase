@@ -8,11 +8,8 @@
 
 <script>
 
-  import {store} from '../store/store'
-
   export default {
     name: 'Counter',
-    store,
     methods: {
       increment() {
         this.$store.commit('increment')

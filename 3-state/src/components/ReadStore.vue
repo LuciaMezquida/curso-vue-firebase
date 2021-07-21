@@ -6,11 +6,8 @@
 
 <script>
 
-  import {store} from '../store/store'
-
   export default {
     name: 'ReadStore',
-    store
   }
 </script>
 
