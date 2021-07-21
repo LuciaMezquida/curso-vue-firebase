@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h1>Ejemplo de Vuex básico by {{name}}</h1>
+    <h1>Ejemplo de Vuex básico by {{name}} (edad: {{age}})</h1>
     <Counter/>
     <ReadStore />
   </div>
@@ -10,6 +10,7 @@
 
 import Counter from './components/Counter'
 import ReadStore from './components/ReadStore'
+import {mapState} from 'vuex'
 
 export default {
   name: 'App',
@@ -17,11 +18,13 @@ export default {
     Counter,
     ReadStore
   },
-  computed:{
-    name(){
-      return this.$store.state.name
-    }
-  }
+  // computed:
+  //   mapState({
+  //     name: state => state.name,
+  //     age: state => state.age,
+  //   })
+  computed: mapState(['name', 'age'])
+  
 }
 </script>
 
