@@ -10,7 +10,7 @@
     name: 'Blog',
     methods:{
       backToStart(){
-        this.$router.push('/')
+        this.$router.push('/', ()=>{console.log('Has vuelto')})
       }
     }
   }
