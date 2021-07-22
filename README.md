@@ -29,5 +29,10 @@ Course of [Vue](https://vuejs.org/v2/guide/) and [Firebase](https://firebase.goo
 * [Vue Routes](https://router.vuejs.org/guide/#html)
 * [Programmating Navigation](https://router.vuejs.org/guide/essentials/navigation.html): program a route inside a method
 * [Dynamic routes](https://router.vuejs.org/guide/essentials/dynamic-matching.html#reacting-to-params-changes)
+* [Programatic navigation](https://router.vuejs.org/guide/essentials/navigation.html)
+
+## Directives
+
+* [Custom directives](https://vuejs.org/v2/guide/custom-directive.html)
 
 
