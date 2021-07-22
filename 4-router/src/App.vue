@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <h1>Pasos para trabajar con rutas en VUE</h1>
-    <router-link to="/">Inicio</router-link>
-    <router-link to="/blog">Blog</router-link>
+    <router-link tag="li" active-class="active" exact to="/"><a>Inicio</a></router-link>
+    <router-link tag="li" active-class="active" to="/blog"><a>Blog</a></router-link>
     <router-view></router-view>
   </div>
 </template>
@@ -18,6 +18,9 @@ export default {
 </script>
 
 <style>
+.active a{
+  color: orange;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
