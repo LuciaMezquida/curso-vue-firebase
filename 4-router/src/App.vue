@@ -3,6 +3,7 @@
     <h1>Pasos para trabajar con rutas en VUE</h1>
     <router-link tag="li" active-class="active" exact to="/"><a>Inicio</a></router-link>
     <router-link tag="li" active-class="active" to="/blog"><a>Blog</a></router-link>
+    <router-link tag="li" active-class="active" to="/post/01"><a>Post</a></router-link>
     <router-view></router-view>
   </div>
 </template>
