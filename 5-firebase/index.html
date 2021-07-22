@@ -27,6 +27,7 @@
       <ul>
         <li v-for="user in users">{{user.data.name}} -- {{user.data.age}}</li>
         <button @click="deleteUser(user.id)">Borrar</button>
+        <button @click="updateUser(user.id)">Actualizar</button>
       </ul>
     </div>
 
@@ -74,10 +75,21 @@
                 this.$mount(); //autorenderizado
               });
           },
-          deleteUser() {
+          deleteUser(id) {
             collection
               .doc(id)
               .delete()
+              .then(() => {
+                this.$mount(); //autorenderizado
+              });
+          },
+          updateUser(id) {
+            collection
+              .doc(id)
+              .set({
+                name: this.name,
+                age: this.age,
+              })
               .then(() => {
                 this.$mount(); //autorenderizado
               });
