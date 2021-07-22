@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <h1>Pasos para trabajar con rutas en VUE</h1>
+    <router-wiew />
   </div>
 </template>
 
