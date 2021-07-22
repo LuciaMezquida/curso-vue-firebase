@@ -13,6 +13,11 @@
       return {
         id,
       }
+    },
+    watch: {
+      '$route'(to){
+        this.id = to.params.id
+      }
     }
   }
 </script>
