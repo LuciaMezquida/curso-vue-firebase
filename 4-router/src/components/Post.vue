@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Recepción del parámetro de la ruta</h2>
+    <h2 v-topfix:background.orange="200">Recepción del parámetro de la ruta</h2>
     <p>{{id}}</p>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias itaque consequatur molestias placeat consectetur, facilis minima architecto quibusdam fuga facere maiores possimus voluptatem quae, dolore ea eum enim ex. Enim.</p>
     <p>Sint sunt animi aspernatur maxime dolorum ipsum delectus quis, officiis officia cumque. Amet hic tempora laboriosam vel! Et, repellat suscipit placeat autem laudantium, quia temporibus quisquam, doloribus dolor alias rerum!</p>

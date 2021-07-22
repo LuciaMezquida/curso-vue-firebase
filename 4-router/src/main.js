@@ -7,9 +7,21 @@ Vue.config.productionTip = false;
 Vue.use(VueRouter);
 Vue.directive("alert", {
   bind: (el, binding) => {
-    // Focus the element
     el.style.color = "red";
     el.style.fontSize = binding.value + "px";
+  },
+});
+Vue.directive("topfix", {
+  bind: (el, binding) => {
+    el.style.position = "fixed";
+
+    if (binding.expression) el.style.top = binding.expression + "px";
+    if (binding.arg) {
+      let color = "beige";
+      let modifiers = Object.keys(binding.modifiers);
+      if (modifiers.length > 0) color = modifiers[0];
+      el.style.backgroundColor = color;
+    }
   },
 });
 
