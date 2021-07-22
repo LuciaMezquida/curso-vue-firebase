@@ -1,0 +1,76 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="main">
+      <form @submit.prevent="addUser">
+        <input
+          v-model="name"
+          type="text"
+          id="name"
+          placeholder="Introduce tu nombre"
+        />
+        <input
+          v-model="age"
+          type="text"
+          id="age"
+          placeholder="Introduce tu edad"
+        />
+        <input type="submit" value="Añadir usuario" />
+      </form>
+      <hr />
+      <h2>Listado</h2>
+      <ul>
+        <li v-for="user in users">{{user.data.name}} -- {{user.data.age}}</li>
+      </ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-firestore.js"></script>
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyAdNuedeJS5J2HO58ZIUYLDHxZpeaq2IPY",
+        authDomain: "curso-vue-fc62c.firebaseapp.com",
+        projectId: "curso-vue-fc62c",
+        storageBucket: "curso-vue-fc62c.appspot.com",
+        messagingSenderId: "550496665371",
+        appId: "1:550496665371:web:9a9b78d231e6c8b3875dbe",
+        measurementId: "G-770P1PBDE6",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      const database = firebase.firestore();
+      const collection = database.collection("users");
+
+      new Vue({
+        el: "#main",
+        data: {
+          name: null,
+          age: null,
+          users: [],
+        },
+        mounted() {
+          this.users = [];
+          collection.get().then((response) => {
+            response.docs.maps((item) => {
+              this.users.push({ id: item.id, data: item.data() });
+            });
+          });
+        },
+        methods: {
+          addUser() {
+            collection.add({
+              name: this.name,
+              age: this.age,
+            });
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
