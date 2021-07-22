@@ -26,6 +26,7 @@
       <h2>Listado</h2>
       <ul>
         <li v-for="user in users">{{user.data.name}} -- {{user.data.age}}</li>
+        <button @click="deleteUser(user.id)">Borrar</button>
       </ul>
     </div>
 
@@ -64,10 +65,22 @@
         },
         methods: {
           addUser() {
-            collection.add({
-              name: this.name,
-              age: this.age,
-            });
+            collection
+              .add({
+                name: this.name,
+                age: this.age,
+              })
+              .then(() => {
+                this.$mount(); //autorenderizado
+              });
+          },
+          deleteUser() {
+            collection
+              .doc(id)
+              .delete()
+              .then(() => {
+                this.$mount(); //autorenderizado
+              });
           },
         },
       });
