@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <h1>Pasos para trabajar con rutas en VUE</h1>
-    <router-wiew />
+    <router-link to="/">Inicio</router-link>
+    <router-link to="/blog">Blog</router-link>
+    <router-view></router-view>
   </div>
 </template>
 
