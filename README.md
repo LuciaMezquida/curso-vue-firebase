@@ -27,6 +27,6 @@ Course of [Vue](https://vuejs.org/v2/guide/) and [Firebase](https://firebase.goo
 ## Router
 
 * [Vue Routes](https://router.vuejs.org/guide/#html)
-* [Programmating Navigation](https://router.vuejs.org/guide/essentials/navigation.html)
+* [Programmating Navigation](https://router.vuejs.org/guide/essentials/navigation.html): program a route inside a method
 
 
