@@ -5,6 +5,13 @@ import { routes } from "./routes";
 
 Vue.config.productionTip = false;
 Vue.use(VueRouter);
+Vue.directive("alert", {
+  bind: (el, binding) => {
+    // Focus the element
+    el.style.color = "red";
+    el.style.fontSize = binding.value + "px";
+  },
+});
 
 const router = new VueRouter({ routes });
 
